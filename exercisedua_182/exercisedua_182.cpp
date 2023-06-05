@@ -36,3 +36,11 @@ public:
 void pengarang::tambahPenerbit(penerbit* pPenerbit) {
 	daftar_penerbit.push_back(pPenerbit);
 }
+
+void pengarang::cetakPenerbit() {
+	cout << "Daftar penerbit yang menerbitkan buku pengarang \"" << this->nama << "\":\n";
+	for (auto& a : daftar_penerbit) {
+		cout << a->nama << "\n";
+	}
+	cout << endl;
+}
