@@ -38,7 +38,7 @@ void pengarang::tambahPenerbit(penerbit* pPenerbit) {
 }
 
 void pengarang::cetakPenerbit() {
-	cout << "Daftar penerbit yang menerbitkan buku \"" << this->nama << "\":\n";
+	cout << "Daftar penerbit yang diikuti \"" << this->nama << "\":\n";
 	for (auto& a : daftar_penerbit) {
 		cout << a->nama << "\n";
 	}
@@ -51,7 +51,7 @@ void penerbit::tambahPengarang(pengarang* pPengarang) {
 }
 
 void penerbit::cetakPengarang() {
-	cout << "Daftar buku yang diterbitkan \"" << this->nama << "\":\n";
+	cout << "Daftar pengarang pada penerbit \"" << this->nama << "\":\n";
 	for (auto& a : daftar_pengarang) {
 		cout << a->nama << "\n";
 	}
@@ -75,16 +75,6 @@ int main() {
 	varPenerbit1->cetakPengarang();
 	varPenerbit2->cetakPengarang();
 	varPengarang1->cetakPenerbit();
-	varPengarang2->cetakPenerbit(); 
-	varPengarang3->cetakPenerbit(); 
-	varPengarang4->cetakPenerbit();
-
-	delete varPengarang1;
-	delete varPengarang2; 
-	delete varPengarang3; 
-	delete varPengarang4;  
-	delete varPenerbit1;
-	delete varPenerbit2;
 
 	return 0;
 }
