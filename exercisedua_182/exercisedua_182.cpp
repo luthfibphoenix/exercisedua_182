@@ -20,7 +20,7 @@ public:
 class penerbit {
 public:
 	string nama;
-	vector<penerbit*> daftar_penerbit;
+	vector<pengarang*> daftar_pengarang;
 
 	penerbit(string pNama) :nama(pNama) {
 		cout << "Penerbit \"" << nama << "\" ada\n";
@@ -43,4 +43,9 @@ void pengarang::cetakPenerbit() {
 		cout << a->nama << "\n";
 	}
 	cout << endl;
+}
+
+void penerbit::tambahPengarang(pengarang* pPengarang) {
+	daftar_pengarang.push_back(pPengarang);
+	pPengarang->tambahPenerbit(this);
 }
